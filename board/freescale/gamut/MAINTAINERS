@@ -1,0 +1,6 @@
+GAMUT BOARD
+M:	Matthew Campbell <mcampbell@izotope.com>
+S:	Maintained
+F:	board/izotope/gamut
+F:	include/configs/gamut.h
+F:	configs/gamut_defconfig

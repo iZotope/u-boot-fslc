@@ -1,0 +1,15 @@
+if TARGET_GAMUT
+
+config SYS_BOARD
+	default "gamut"
+
+config SYS_VENDOR
+	default "freescale"
+
+config SYS_SOC
+	default "mx6"
+
+config SYS_CONFIG_NAME
+	default "gamut"
+
+endif

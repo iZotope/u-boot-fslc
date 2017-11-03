@@ -1,0 +1,3 @@
+[submodule "board/freescale/gamut/hardware-shared-open"]
+	path = board/freescale/gamut/hardware-shared-open
+	url = https://github.com/iZotope/hardware-shared-open.git

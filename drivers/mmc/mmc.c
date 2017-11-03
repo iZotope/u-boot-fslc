@@ -619,6 +619,16 @@ int mmc_switch_part(int dev_num, unsigned int part_num)
 	return ret;
 }
 
+int mmc_get_boot_part(int dev_num)
+{
+	struct mmc *mmc = find_mmc_device(dev_num);
+
+	if (!mmc || mmc->part_config == MMCPART_NOAVAILABLE)
+		return -1;
+
+	return mmc->part_config & BOOT_PART_MASK;
+}
+
 int mmc_hwpart_config(struct mmc *mmc,
 		      const struct mmc_hwpart_conf *conf,
 		      enum mmc_hwpart_conf_mode mode)

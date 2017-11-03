@@ -257,6 +257,12 @@
 #define ENHNCD_SUPPORT		(0x2)
 #define PART_ENH_ATTRIB		(0x1f)
 
+#define BOOT_PART_MASK		(0x38)
+#define BOOT_PART_DISABLED	(0x0 << 3)
+#define BOOT_PART_1		(0x1 << 3)
+#define BOOT_PART_2		(0x2 << 3)
+#define BOOT_PART_USER		(0x7 << 3)
+
 /* Maximum block size for MMC */
 #define MMC_MAX_BLOCK_LEN	512
 
@@ -412,6 +418,7 @@ int mmc_set_dev(int dev_num);
 void print_mmc_devices(char separator);
 int get_mmc_num(void);
 int mmc_switch_part(int dev_num, unsigned int part_num);
+int mmc_get_boot_part(int dev_num);
 int mmc_hwpart_config(struct mmc *mmc, const struct mmc_hwpart_conf *conf,
 		      enum mmc_hwpart_conf_mode mode);
 int mmc_getcd(struct mmc *mmc);

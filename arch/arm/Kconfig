@@ -479,6 +479,10 @@ config TARGET_MX53SMD
 	bool "Support mx53smd"
 	select CPU_V7
 
+config TARGET_GAMUT
+	bool "Support izotope Gamut"
+	select CPU_V7
+
 config OMAP34XX
 	bool "OMAP34XX SoC"
 	select CPU_V7
@@ -757,6 +761,7 @@ source "board/freescale/mx53evk/Kconfig"
 source "board/freescale/mx53loco/Kconfig"
 source "board/freescale/mx53smd/Kconfig"
 source "board/freescale/vf610twr/Kconfig"
+source "board/freescale/gamut/Kconfig"
 source "board/gumstix/pepper/Kconfig"
 source "board/h2200/Kconfig"
 source "board/hisilicon/hikey/Kconfig"
